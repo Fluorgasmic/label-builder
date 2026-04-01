@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'T-Star Pro';
+  src: url('./assets/fonts/T-StarPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'T-Star Pro';
+  src: url('./assets/fonts/T-StarPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'T-Star Pro';
+  src: url('./assets/fonts/T-StarPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'T-Star Pro';
+  src: url('./assets/fonts/T-StarPro-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --color-oxfam-dark: #2c2518;
+  --color-oxfam-accent: #c4501a;
+  --color-oxfam-accent-light: #f5e6dc;
+  --color-oxfam-green: #3a7d44;
+  --color-oxfam-green-light: #e4f0e6;
+  --color-oxfam-bg: #f0ede8;
+  --color-oxfam-surface: #ffffff;
+  --color-oxfam-surface-alt: #f8f6f2;
+  --color-oxfam-border: #ddd7cc;
+  --color-oxfam-muted: #8b7d6b;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--color-oxfam-bg);
+  color: var(--color-oxfam-dark);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.toolbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: 1px solid var(--color-oxfam-border);
+  border-radius: 6px;
+  background: var(--color-oxfam-surface);
+  color: var(--color-oxfam-dark);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.toolbar-btn:hover {
+  background: var(--color-oxfam-surface-alt);
+  border-color: var(--color-oxfam-muted);
+}
+.toolbar-btn.active {
+  background: var(--color-oxfam-surface-alt);
+  border-color: var(--color-oxfam-muted);
+}
+.toolbar-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.toolbar-btn-accent {
+  background: var(--color-oxfam-accent);
+  color: #fff;
+  border-color: var(--color-oxfam-accent);
+}
+.toolbar-btn-accent:hover {
+  filter: brightness(1.1);
+  background: var(--color-oxfam-accent);
+}
+.toolbar-btn-accent.active {
+  background: var(--color-oxfam-accent);
+  border-color: var(--color-oxfam-dark);
+}
+.toolbar-btn-accent:disabled {
+  opacity: 0.4;
+  cursor: default;
+  filter: none;
+}
